@@ -1,0 +1,42 @@
+
+body{
+    background-image: url('./img/1.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    font-family: Comic Sans MS;
+    font: bold;
+    font-size: 1.5rem;
+    border: 2px #ff0000 solid;
+    width: 300px;
+    height: 590px;
+}
+.container #botResponse{
+    text-align: left;
+    color: #32ff6f;
+}
+.container #msg{
+    text-align: right;
+    color: purple;
+}
+.container #inputField, button{
+    background: #000;
+    color: #fff;
+    
+}
+.search{
+    border: 2px #fff solid;
+    border-radius: ;
+    position: absolute;
+    width: 250px;
+    right: 0;
+    top: 0;
+}
+#img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

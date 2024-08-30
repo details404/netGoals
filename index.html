@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev</title>
+</head>
+<style>
+    body{
+        background-image: url('./img/1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    *{
+ 
+        text-align: center;
+        color: blueviolet;
+    }
+    button{
+        background: darkblue;
+    }
+    #inputField{
+        background-image: url('./img/girl.png');
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="msg"></div>
+        <div id="botreply"></div>
+        <input type="text" id="inputField">
+        <br>
+        <button onclick="func()">Search</button>
+    </div>
+<script>
+    function func(){
+ const brain = document.querySelector("#botreply");   
+const msg = document.querySelector("#msg");
+const inputField = document.querySelector("#inputField");
+//chat incoming
+const trainData = {
+  "location" : location = "https://" + inputField.value,
+}
+
+function getResponse(chatInput){
+    const Data = chatInput.trim();
+
+    if(trainData[Data]){
+        //my data
+        return trainData[Data];
+    }else {
+        return  inputField.value +" " + "is loading...";
+    }
+
+}
+
+const chatInput =  inputField.value;
+const response = getResponse(chatInput);
+brain.innerHTML = "" + response;
+    }
+</script>
+</body>
+</html>
